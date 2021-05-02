@@ -5,7 +5,8 @@ const Mainpage = (props) => {
         return ( 
         <div>
             <Navbar />
-            <h1>this.props.username</h1>
+            <h1>Home page</h1>
+            <p>Welcome to xyz Pharmacy</p>
         </div> );
 }
  

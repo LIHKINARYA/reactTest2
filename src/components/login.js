@@ -5,6 +5,10 @@ import Mainpage from './Mainpage';
 
 
 export const Login = () => {
+
+  function mainpage() {
+    window.location.href="/home";
+    }
     const adminUser = {
         username : "test-admin",
         password : "test-admin"
@@ -43,7 +47,7 @@ export const Login = () => {
     return ( 
         <div className="App">
             {(user.username != "") ? (
-                 <Mainpage username={user.username}/>
+                 mainpage() 
                 ) : (
                   <Loginform Login={Login} error={error}/>
                 )

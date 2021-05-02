@@ -1,5 +1,6 @@
 import React,{ useState} from 'react'
 import {Form,Button} from 'react-bootstrap';
+import  '../components/component.css';
 
 function Loginform({ Login,error}) {
 
@@ -11,8 +12,9 @@ function Loginform({ Login,error}) {
         Login(details);
     }
     return (
-        <div>
-            <Form className="" onSubmit={submitHandler}>
+        <div >
+            <div className="login">
+            <Form  onSubmit={submitHandler}>
                 <h2>Login</h2>
                 {(error != "") ? (<div className="error">{error}</div>) : ""}
                 <div className="form-group">
@@ -28,6 +30,7 @@ function Loginform({ Login,error}) {
 
                 <Button type="submit">Submit</Button>
             </Form>
+            </div>
         </div>
     )
 }
