@@ -1,6 +1,7 @@
 import React ,{ Component }from 'react';
 import Navbar from './navbar';
 
+
 const Mainpage = (props) => {  
         return ( 
         <div>

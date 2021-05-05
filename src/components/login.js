@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Loginform from '../components/Loginform';
 
-import Mainpage from './Mainpage';
+import Mainpage from './mainpage2';
 
 
 export const Login = () => {
@@ -9,6 +9,12 @@ export const Login = () => {
   function mainpage() {
     window.location.href="/home";
     }
+
+  function mainpage2() {
+    window.location.href="/homee";
+    }
+
+
     const adminUser = {
         username : "test-admin",
         password : "test-admin"
@@ -45,14 +51,16 @@ export const Login = () => {
       }
     
     return ( 
-        <div className="App">
-            {(user.username != "") ? (
-                 mainpage() 
-                ) : (
-                  <Loginform Login={Login} error={error}/>
-                )
-            }
-        </div> 
+      <div className="App">
+        {
+        (user.username =="test-admin") ? ( mainpage()) :
+        (user.username == "test-sales") ? ( mainpage2()) :
+          (
+          <Loginform Login={Login} error={error} />
+        )
+
+        }
+      </div>
     );
 }
  
